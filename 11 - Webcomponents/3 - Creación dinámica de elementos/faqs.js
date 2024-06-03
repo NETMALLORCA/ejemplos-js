@@ -70,13 +70,16 @@ class Faqs extends HTMLElement {
     this.data.forEach(faq => {
 
       const faqsContainer = this.shadow.querySelector('.faqs')
+      // this.shadow.querySelector('.faqs') "para selecionar un elemento"
       const faqContainer = document.createElement('div')
+      // document.createElement('div') "para crear un elemento"
       faqContainer.classList.add('faq')
-      
+      // faqContainer.classList.add('faq') "nombre de la clase que quieres aregar"
       const question = document.createElement('h2')
       question.textContent = faq.question
       faqContainer.appendChild(question)
-
+      // faqContainer.appendChild(question) "para meteer un elemento dentro de otro"
+     
       const answer = document.createElement('p')
       answer.textContent = faq.answer
       faqContainer.appendChild(answer)
